@@ -1,0 +1,57 @@
+@use './breakpoints';
+
+@mixin add-page-lr-padding {
+	padding: {
+		right: 32px;
+		left: 32px;
+	}
+
+	@include breakpoints.md {
+		padding: {
+			right: 32px;
+			left: 32px;
+		}
+	}
+
+	@include breakpoints.lg {
+		padding: {
+			right: 96px;
+			left: 96px;
+		}
+	}
+
+	@include breakpoints.xl {
+		padding: {
+			right: 124px;
+			left: 124px;
+		}
+	}
+}
+
+@mixin add-section-lr-padding {
+	padding: {
+		right: 32px;
+		left: 32px;
+	}
+
+	@include breakpoints.md {
+		padding: {
+			right: 32px;
+			left: 32px;
+		}
+	}
+
+	@include breakpoints.lg {
+		padding: {
+			right: 96px;
+			left: 96px;
+		}
+	}
+
+	@include breakpoints.xl {
+		padding: {
+			right: 240px;
+			left: 240px;
+		}
+	}
+}

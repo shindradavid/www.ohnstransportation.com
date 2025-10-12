@@ -1,0 +1,42 @@
+@use '../../styles/utils' as u;
+
+.getAppPage {
+  .comingSoonSection {
+    padding-top: var(--spacing-10xl);
+    padding-bottom: var(--spacing-8xl);
+    background-color: var(--clr-bg-accent-2);
+    color: var(--clr-txt-primary-on-bg-accent-2);
+    text-align: center;
+    @include u.add-section-lr-padding;
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-sm);
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-bold);
+        color: var(--clr-accent-1);
+        margin-bottom: var(--spacing-sm);
+
+        @include u.respond-to('lg-screens') {
+          font-size: var(--fs-xl);
+        }
+      }
+
+      p {
+        font-size: var(--fs-md);
+        margin-top: var(--spacing-lg);
+        color: var(--clr-txt-secondary-on-bg-accent-2);
+
+        @include u.respond-to('lg-screens') {
+          font-size: var(--fs-lg);
+        }
+      }
+    }
+  }
+}

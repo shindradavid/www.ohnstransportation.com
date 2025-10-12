@@ -1,0 +1,139 @@
+@use '../../../styles/utils' as utils;
+
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  overflow: hidden;
+
+  @include utils.respond-to('lg-screens') {
+    height: 80vh;
+  }
+
+  .heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-page-hero-image);
+
+    .heroOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.65);
+      z-index: var(--z-page-hero-overlay);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .heroContent {
+    @include utils.add-section-lr-padding();
+    position: relative;
+    z-index: var(--z-page-hero-content);
+    color: var(--clr-txt-primary-on-bg-accent-1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: var(--spacing-6xl);
+    padding-bottom: var(--spacing-6xl);
+
+    @include utils.respond-to('lg-screens') {
+      margin: 0;
+      max-width: 800px;
+      padding-top: var(--spacing-12xl);
+      padding-bottom: var(--spacing-12xl);
+    }
+
+    .heading {
+      font-size: var(--fs-xl);
+      text-align: center;
+      font-weight: var(--fw-extrabold);
+      margin-bottom: var(--spacing-lg);
+      line-height: 1.4;
+
+      @include utils.respond-to('lg-screens') {
+        text-align: left;
+        font-size: var(--fs-3xl);
+      }
+    }
+
+    .subheading {
+      font-size: var(--fs-base);
+      text-align: center;
+      margin-bottom: var(--spacing-2xl);
+      line-height: 1.6;
+
+      @include utils.respond-to('lg-screens') {
+        text-align: left;
+        font-size: var(--fs-md);
+      }
+    }
+
+    .ctaGroup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-md);
+
+      @include utils.respond-to('lg-screens') {
+        align-items: flex-start;
+        flex-direction: row;
+        gap: var(--spacing-xl);
+      }
+
+      .ctaButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        border-radius: var(--radius-sm);
+        padding: var(--spacing-md) var(--spacing-md);
+        line-height: 1;
+        min-width: 250px;
+        text-decoration: none;
+        font-weight: var(--fw-semibold);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        &:active {
+          transform: scale(0.95);
+          transition: transform 0.15s ease;
+        }
+
+        &.primary {
+          background-color: var(--clr-bg-accent-2);
+          color: var(--clr-txt-primary-on-bg-accent-2);
+          width: fit-content;
+
+          @include utils.respond-to('md-screens') {
+            width: auto;
+          }
+        }
+
+        &.block {
+          background-color: transparent;
+          border: 2px solid #ffffff;
+          color: var(--clr-txt-primary-on-bg-accent-1);
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1); // Slight hover effect
+          }
+        }
+      }
+    }
+  }
+}

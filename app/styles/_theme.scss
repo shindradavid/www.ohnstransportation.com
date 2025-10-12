@@ -1,0 +1,107 @@
+@use 'sass:color'; // Make sure this is at the top if you're using Sass color functions
+
+:root {
+  // Keeping shadow as is, it's neutral
+  --clr-shadow: #42424230;
+
+  /****
+    ACCENT COLORS
+    (Your chosen brand colors)
+  ****/
+  --clr-accent-1: #003e81;
+  --clr-accent-2: #1f7d60;
+
+  /****
+    STATUS COLORS
+    (These remain distinct as they serve a functional purpose)
+  ****/
+  --clr-error: #cc0000; // Strong red, good contrast for errors
+  --clr-success: #328000; // Deep green, clear for success
+  --clr-info: #007bff; // Standard blue, for general info
+  --clr-warning: #ffcc00; // Bright yellow/orange, stands out for warnings
+
+  /****
+    BACKGROUNDS & TEXT COLORS
+    (Adjusted for readability and harmony with new warm backgrounds)
+  ****/
+
+  // Primary Background (Main page background)
+  --clr-bg-primary: #ffffff; // Light, warm cream
+  --clr-txt-primary-on-bg-primary: #2b2b2b; // Darker warm gray for main text
+  --clr-txt-secondary-on-bg-primary: #757575; // Medium warm gray for secondary text
+  --clr-border-primary-on-bg-primary: #d6cdc3; // A complementary, slightly darker border
+  --clr-border-secondary-on-bg-primary: #e8dfd5; // Lighter, more subtle border
+
+  --clr-bg-secondary: #e4d5c7; // Mid-tone, warm beige
+  --clr-txt-primary-on-bg-secondary: #1c1c1c; // Same primary text for consistency
+  --clr-txt-secondary-on-bg-secondary: #333333; // Same secondary text for consistency
+  --clr-border-primary-on-bg-secondary: #c0b2a3; // A complementary, slightly darker border
+  --clr-border-secondary-on-bg-secondary: #d3c4b6; // Lighter, more subtle border
+
+  --clr-bg-tertiary: #1d231f;
+  --clr-txt-primary-on-bg-tertiary: #2b2b2b;
+  --clr-txt-secondary-on-bg-tertiary: #757575;
+  --clr-border-primary-on-bg-tertiary: #2b2b2b;
+
+  --clr-bg-accent-1: #003e81;
+  --clr-txt-primary-on-bg-accent-1: #ffffff;
+  --clr-txt-secondary-on-bg-accent-1: #e0e0e0;
+  --clr-border-primary-on-bg-accent-1: #4a6f91;
+  --clr-border-secondary-on-bg-accent-1: #7d9cb8;
+
+  --clr-bg-accent-2: #1f7d60;
+  --clr-txt-primary-on-bg-accent-2: #ffffff;
+  --clr-txt-secondary-on-bg-accent-2: #e0e0e0;
+  --clr-border-primary-on-bg-accent-2: #b7b7b7;
+  --clr-border-secondary-on-bg-accent-2: #b7b7b7;
+
+  --clr-link: var(--clr-accent-1);
+  --clr-link-hover: color.lighten(var(--clr-accent-1), 10%);
+  --clr-button-bg-primary: var(--clr-accent-1);
+  --clr-button-text-primary: var(--clr-txt-primary-on-bg-accent-1);
+  --clr-button-bg-secondary: var(--clr-accent-2);
+  --clr-button-text-secondary: var(--clr-txt-primary-on-bg-accent-2);
+}
+
+body {
+  background-color: var(--clr-bg-primary);
+  color: var(--clr-txt-primary-on-bg-primary);
+  font-family: Arial, sans-serif; /* Example font */
+  line-height: 1.6;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+// Basic Link Styling
+a {
+  color: var(--clr-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--clr-link-hover);
+    text-decoration: underline;
+  }
+}
+
+// Example usage of some new variables in a button
+button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &.primary {
+    background-color: var(--clr-button-bg-primary);
+    color: var(--clr-button-text-primary);
+  }
+
+  &.secondary {
+    background-color: var(--clr-button-bg-secondary);
+    color: var(--clr-button-text-secondary);
+  }
+}
