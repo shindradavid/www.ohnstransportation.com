@@ -36,9 +36,9 @@ const contactChannels = [
   {
     icon: <FaEnvelope />,
     title: 'General Inquiries',
-    detail: 'ohnstransportion@gmail.com',
+    detail: 'ohnstransportions@gmail.com',
     ctaText: 'Send Email',
-    link: 'mailto:ohnstransportion@gmail.com',
+    link: 'mailto:ohnstransportions@gmail.com',
   },
 ];
 
