@@ -36,9 +36,9 @@ const contactChannels = [
   {
     icon: <FaEnvelope />,
     title: 'General Inquiries',
-    detail: 'info@ohnstransport.ug',
+    detail: 'ohnstransportion@gmail.com',
     ctaText: 'Send Email',
-    link: 'mailto:info@ohnstransportion.com',
+    link: 'mailto:ohnstransportion@gmail.com',
   },
 ];
 
@@ -90,7 +90,7 @@ const ContactUsPage = () => {
               For urgent roadside assistance or vehicle recovery, call our dedicated line immediately. Our tow truck and breakdown
               team is available 24 hours a day, 7 days a week.
             </p>
-            <a href="tel:+256701234567" className="btn btn-secondary">
+            <a href="tel:+256700540249" className="btn btn-secondary">
               <FaPhone /> Call Emergency Line
             </a>
           </div>
