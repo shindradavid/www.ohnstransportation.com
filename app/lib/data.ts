@@ -23,8 +23,8 @@ export const ourServices = [
   {
     id: 'breakdown',
     title: '24/7 Breakdown & Tow Truck',
-    description: `Car trouble happens to everyone. Our rapid-response breakdown service and tow truck fleet are available 24 hours a day, 7 days a week, across the greater Kampala area to get you and your vehicle to safety.`,
+    description: `Car trouble happens to everyone. Our rapid-response breakdown service and tow truck fleet are available 24 hours a day, 7 days a week, across Uganda to get you and your vehicle to safety.`,
     imagePath: '/images/service-breakdown.png',
-    imageAlt: "OHN'S Tow Truck assisting a broken-down vehicle on a Kampala road.",
+    imageAlt: "OHN'S Tow Truck assisting a broken-down vehicle in Uganda.",
   },
 ];
